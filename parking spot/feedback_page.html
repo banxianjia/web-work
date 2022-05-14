@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>反馈网站</title>
+
+		<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				$("#pull1").click(function() {
+					$("#side").animate({
+						width: '100px'
+					}, 300);
+				});
+				$("#pull2").click(function() {
+					$("#side").animate({
+						width: '0px'
+					}, 300);
+				});
+			})
+		</script>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				border: 0;
+			}
+			.pull{
+				width: 8px; 
+				height: 50px;
+				position: relative;
+				background-color: #000000;
+			}
+			#side {
+				width: 0px;
+				height: 200px;
+				float: right;
+				background-color: gold;
+				overflow: hidden;
+			}
+			
+			#side a {
+				display: block;
+				text-decoration: none;
+				color: #262626;
+				margin: 16px 15px;
+			}
+			
+			#side a:hover {
+				background-color: #FFFFFF;
+			}
+			/* 侧边链接栏 */
+			
+			
+			#nav{
+				position: fixed;
+				background-color: #ffff7f;
+				height: 80px;
+				width: 1000px;
+				margin: 0 auto;
+			}
+			
+			#login{
+				background-color: #3399CC;
+				width: 50px;
+				height: 50px;
+				display: inline-block;
+			}
+			.col {
+				margin: 50px auto;
+				width: 966px;
+				height: 480px;
+				
+			}
+			#nav {
+				width: 966px;
+				height: 81.5px;
+				padding: 0 100px;
+				margin: 0 auto;
+				background-color: #989898;
+				opacity: .8;
+			}
+			
+			
+			
+			.square{
+				position: relative;
+				width: 400px;
+				height: 400px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			.square span:nth-child(1){
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				border: 2px solid #FFFFFF;
+				border-radius: 38% 62% 63% 37% /41% 44% 56% 
+				59%;
+				transition: .5s;
+				animation: animate 6s linear infinite;
+			}
+			.square:hover span:nth-child(1){
+				border: 2px solid rgba(119, 167, 138, 1.0);
+				background-color: rgba(119, 167, 138, 1.0);
+			}
+			.square span:nth-child(2){
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				border: 2px solid #FFFFFF;
+				border-radius: 38% 62% 63% 37% /41% 44% 56% 
+				59%;
+				transition: .5s;
+				animation: animate 4s linear infinite;
+			}
+			.square:hover span:nth-child(2){
+				border: 2px solid rgba(119, 167, 138, 1.0);
+				background-color: rgba(119, 167, 138, 1.0);
+			}
+			.square span:nth-child(3){
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				border: 2px solid #FFFFFF;
+				border-radius: 38% 62% 63% 37% /41% 44% 56% 
+				59%;
+				transition: .5s;
+				animation: animate2 10s linear infinite;
+			}
+			.square:hover span:nth-child(3){
+				border: 2px solid rgba(119, 167, 138, 1.0);
+				background-color: rgba(119, 167, 138, 1.0);
+			}
+			@keyframes  animate{
+				0%{
+					transform: rotate(0deg);
+				}
+				100%{
+					transform: rotate(360deg);
+				}
+			}
+			@keyframes  animate2{
+				0%{
+					transform: rotate(360deg);
+				}
+				100%{
+					transform: rotate(0deg);
+				}
+			}
+			.content{
+				position: relative;
+				padding: 40px 60px;
+				color: #FFFFFF;
+				text-align: center;
+				transition: .5s;
+				z-index: 1000;
+			}
+			
+			
+			#te{
+				border: 2px solid #6b9977;
+				margin: 0 auto;
+				width: 400px;
+				height: 340px;
+				border-radius: 15px;
+			}
+			#te input,textarea,select{
+				background-color: rgba(146, 204, 177, 0.5);
+				border: 1px solid #6b9977;
+				border-radius: 8px;
+				outline: none;
+			}
+			.but:hover{
+				cursor: pointer;
+			}
+		</style>
+	</head>
+	<body bgcolor="#8ecb9e">
+
+
+		<div style="position: fixed;top: 20%; width: 108px;height: 300px;">
+			<div class="pull" id="pull1" style="top: 80px;"></div>
+			<div id="side">
+				<!-- 侧边链接区 -->
+				<a href="index.html">首页</a>
+				<a href="recruit_page.html">招贤纳士</a>
+				<a href="product_page.html">产品网站</a>
+				<a href="login_page.html">登录页面</a>
+				<a href="feedback_page.html">反馈网站</a>
+			</div>
+			<div class="pull" id="pull2" style="top: 100px;"></div>
+		</div>
+
+		<div class="col">
+			<div id="login">
+				<p style="text-align: center;line-height: 50px;font-family: sylfaen;">
+					<a href="login_page.html" style="text-decoration: none;">login</a></p>
+			</div>
+			<h2 style="display: inline-block;margin-left: 250px;">欢迎来到“美停”公司的反馈中心</h1>
+				<br />
+				<br />
+				<br />
+				<div id="te">
+					<div style="border-bottom:2px solid #6b9977 ;">
+					        <br />
+							<span>&nbsp &nbsp &nbsp 用户反馈</span>
+							<br />
+							<br />
+					</div>
+					<form>
+						<label>
+							&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+							<span>Contact:</span>
+							<select >
+								<option value="Email">Email</option>
+								<option value="Phone">Phone</option>
+								<option value="QQ">QQ</option>
+							</select>
+							<br />
+							&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+							&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+							&nbsp 
+							<input type="text" style="width: 240px;">
+						</label>
+						<br />
+						<br />
+						<label>
+							&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+							<span>Message:</span>
+							<br />
+							&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+							&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+							&nbsp
+							<textarea style="height: 80px; width: 240px;" placeholder="Your can tell me"></textarea>
+						</label>
+						<br />
+						<br />
+						<label>
+							&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+							<span>Subject:</span>
+							<select >
+								<option value="Service issues">服务问题</option>
+								<option value="General Question">一般问题</option>
+								<option value="Product issues">产品问题</option>
+							</select>
+						</label>
+						<br />
+						<br />
+						<label>
+							&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+							&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+							&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+							&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+							&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+							&nbsp 
+							<input type="button" style="width: 70px;height: 35px;"  value="Send">
+						</label>
+					</form>
+
+				</div>
+
+		</div>
+		<div class="col">
+			<br />
+			<br />
+			<center>
+				<div class="square">
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<div class="content">
+						<h2>客户就是上帝</h2>
+						<p>
+							<br />
+						我们公司秉承着
+						<br />
+						“客户就是上帝”
+						<br />
+						<br />
+						一定要把服务做好
+						<br />
+						为广大车主服务
+						   也为广大人民提供更多便利</p>
+					</div>
+				</div>
+			</center>
+		</div>
+		
+
+	</body>
+</html>

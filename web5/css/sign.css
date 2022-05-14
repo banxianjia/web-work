@@ -1,0 +1,74 @@
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+a{
+	text-decoration: none;
+	color: white;
+}
+button{
+	position: absolute;
+	bottom: 0;
+	left: 144px;
+	font-size: 50px;
+	background-color: #606060 ;
+	text-align: center;
+	border: 0;
+}
+p{
+	background: #404040;
+	position: relative;
+	top: 580px;
+	overflow: hidden;
+	height: 100px;
+	width: 400px;
+	padding: 20px;
+	left: 80px;
+	transition: all 1s ease-in-out .3s;
+	text-align: center;
+	color: white;
+}
+#wrap{
+	width: 700px;
+	height: 1000px;
+	margin: 20px auto;
+}
+#content-wrap{
+	overflow: hidden;
+	height: 900px;
+	position: relative;
+	left: 57px;
+	top: 0px;
+	transition: all 1s ease-in-out .3s;
+}
+#content-wrap::before{
+	content: "";
+	position: absolute;
+	bottom: 270px;
+	left: -2px;
+	background:url(../img/信封befor.png);
+	width: 609px;
+	height: 445px;
+}
+#content-wrap::after{
+	content: "";
+	position:absolute ;
+	bottom: 112.5px;
+	left: -1px;
+	background: url(../img/信封after.png);
+	width:608px;
+	height: 157px;
+}
+#content-wrap.hide::after,
+#content-wrap.hide::before{
+	display: none;
+}
+#content-wrap:hover{
+	height: 777px;
+	top: 200px;
+}
+#content-wrap:hover p{
+	height: 300px;
+	top: 100px;
+}

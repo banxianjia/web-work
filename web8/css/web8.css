@@ -1,0 +1,195 @@
+a{
+	color: #669;
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: underline;
+}
+h1{
+	font: bold 36px;
+	font-family: "goudy old style";
+}
+#pagewrap{
+	padding: 5px;
+	width: 960px;
+	margin: 20px auto;
+}
+
+#head{
+	height: 100px;
+}
+#top{
+	width: auto;
+}
+#HEAD{
+	width: 40px;
+	height: 40px;
+	position: fixed;
+	right: 0px;
+	top: 0px;
+	background-image: url(../img/1.png);
+	background-repeat: no-repeat;
+	background-size: 101% 100%;
+	display: none;
+}
+#HEAD:hover{
+	cursor: pointer;
+}
+#HEAD:hover #HEAD-nav{
+	display: block;
+}
+#HEAD-nav{
+	position: relative;
+	top: 24px;
+	height: 100px;
+	background-color: rgb(238,182,68,.8);
+	display: none;
+}
+#HEAD-nav li{
+	font-size: 10px;
+	width: 40px;
+	height: 20px;
+	line-height: 15px;
+	margin-left: -42px;
+}
+#head-nav{
+	height: 45px;
+	width: auto;
+	margin: 0 auto 20px;
+	border-radius: 3.5px;
+	background-color: rgb(238,182,68,.8);
+}
+
+#head-nav li{
+	width: 40px;
+	height: 25px;
+	line-height: 25px;
+	margin-left: 18px;
+	margin-top: 10px;
+	font-size: 15px;
+	float: left;
+}
+
+li{
+	display: block;
+	color: #FFF;
+	text-align: center;
+	font-family: SimSun, Arial, "Arial Narrow", HELVETICA;
+	list-style: none;
+}
+
+#content{
+	width: 100%;
+	float: left;
+}
+
+.con{
+	height: 200px;
+	width: auto;
+	margin-top: 1px;
+}
+
+.img_{
+	width: 239px;
+	height: 200px;
+	margin-right: 1px;
+	margin-top: 1px;
+	float: left;
+	overflow: hidden;
+	background-repeat: no-repeat;
+}
+
+#footer{
+	clear: both;
+}
+
+#head,
+#content,
+#top {
+	margin-bottom: 5px;
+}
+
+img{
+	width: 100%;
+	height: 100%;
+}
+img:hover{
+	transform: scale(1.5);
+	transition: 1.1s;
+}
+@media screen and (max-width:2048px){
+	p{
+		font-size: 14px;
+	}
+}
+/*当视图宽度为小于等于980像素时*/
+@media screen and (max-width: 980px){
+	#pagewrap{
+		width: 94%;
+	}
+	.con{
+		height: 200px;
+		margin-bottom: 5px;
+	}
+	.img_{
+		margin-bottom: 5px;
+		width: 24.4%;
+		height: 98%;
+	}
+	p{
+		font-size: 12px;
+	}
+}
+
+
+
+/*当视图宽度为小于等于700像素时*/
+@media screen and (max-width: 700px){
+	#content{
+		width: auto;
+		float: none;
+	}
+	#top{
+		width: auto;
+		float: none;
+	}
+	.con{
+		height: 200px;
+		margin-bottom: 5px;
+	}
+	.img_{
+		margin-bottom: 5px;
+		width: 24.4%;
+		height: 98%;
+	}
+	p{
+		font-size: 1px;
+	}
+}
+/*当视图宽度为小于等于480像素时*/
+@media screen and (max-width: 480px){
+	#head{
+		display: none;
+	}
+	#HEAD{
+		display: block;
+	}
+	h1{
+		font-size: 24px;
+	}
+	#top{
+		display: none;
+	}
+	.con{
+		height: 820px;
+		margin-bottom: 5px;
+		float: none;
+	}
+	.img_{
+		margin-bottom: 5px;
+		width: 100%;
+		height: 24.4%;
+		float: none;
+	}
+}
+

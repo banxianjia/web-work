@@ -1,0 +1,248 @@
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+body{
+	padding: 0 100px;
+}
+a{
+	text-decoration: none;
+}
+#nav{
+	height: 81.8px;
+}
+#l{
+	margin-left: 235px;
+}
+#r{
+	margin-right: 200px;
+}
+#nav ul{
+	position: fixed;
+	width: 966px;
+	height: auto;
+	display: flex;/*有问题*/
+	background-color:#C0C0C0;
+}
+#nav ul li{
+	list-style: none;
+}
+#nav ul li a{
+	position: relative;
+	display: block;
+	padding: 10px 20px;
+	margin: 20px 0;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #262626;
+	font-weight: bold;
+	transition: .6s;
+}
+#nav ul li a:hover{
+	color: #FFFFFF;
+}
+#nav ul li a::before{
+	content:'';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+ 	border-top:1px solid #000000 ;
+	border-bottom: 1px solid #000000; 
+	transform: scaleY(2);/*缩放Y轴(上下) 里面的值缩放距离*/
+	opacity: 0;/*不透明度*/
+	transition: .5s;
+}
+#nav ul li a:hover::before{
+	transform: scaleY(1.2);
+	opacity: 1;
+}
+#nav ul li a::after{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #000000;
+	transform: scale(0);
+	transition: .5s;
+	z-index: -1;/*堆叠*/
+}
+#nav ul li a:hover::after{
+	transform: scale(.7);
+}
+.wrap{
+	width: 966px;
+	height: 80px;
+	margin-top: 10px;
+}
+#phone{
+	width: 50px;
+	height: 50px;
+	background-image: url(../img/wrap_phone.png);
+	margin-left: 20px;
+	margin-top: 10px;
+	float: left;
+}
+#wechat{
+	width: 50px;
+	height: 50px;
+	background-image: url(../img/wrap_wechat.png);
+	margin-left: 20px;
+	margin-top: 10px;
+	float: left;
+}
+#weibo{
+	width: 50px;
+	height: 50px;
+	background-image: url(../img/wrap_weibo.png);
+	margin-left: 20px;
+	margin-top: 10px;
+	float: left;
+}
+#txt{
+	width: 84px;
+	height: 50px;
+	margin-left: 10px;
+	margin-top: 10px;
+	float: left;
+	font-size:28px;
+	font-family: "微软雅黑";
+	color: #939393;
+}
+.left{
+	width: 650px;
+	height: 914px;
+	margin-top: 32px;
+	float: left;
+}
+.right{
+	width: 300px;
+	height: 900px;
+	margin-top: 46px;
+	margin-left: 16px;
+	float: left;
+}
+._buttom{
+	width: 966px;
+	height: 400px;
+	float: left;
+	background-color: rgba(48,48,48,1);
+}
+.r_top{
+	background-image: url(../img/r_top.jpg);
+	background-repeat: no-repeat;
+	width: 300px;
+	height: 45px;
+	border-bottom: 1px solid #e5e5e5;
+	font-size: 18px;
+	font-family: "楷体";
+	margin-top: 15px;
+}
+.list{
+	width: 300px;
+	height: 70px;
+	margin-top: 10px;
+}
+.list span{
+	color: #000000;
+	display: block;
+	padding-left: 115px;
+}
+.list a:hover,
+.mul ul li a:hover{
+	text-decoration: underline;
+	text-decoration-color: #000000;
+}
+.mul{
+	width: 300px;
+	height: 110px;
+	margin-top:14px;
+}
+.mul ul{
+	list-style-type: square;
+	padding-left: 15px;
+	color: rgb(206,96,16);
+}
+.mul ul li span{
+	color: #000000;
+	font-size: 15px;
+}
+.mul ul li{
+	padding-top: 10px;
+}
+.img_{
+	width: 152.5px;
+	height: 230.5px;
+	background-color: cornflowerblue;
+	background-size: 100%;
+	margin: 0 8px 8px 0;
+	float: left;
+	overflow: hidden;
+	position: initial;
+}
+.false{
+	width: 152.5px;
+	height: 60px;
+	background-color: rgba(0,0,0,0);
+	bottom: -60px;
+	position: absolute;
+}
+.left .img_ .false span{
+	display: block;
+	font-size: 20px;
+	padding: 15px;
+}
+.left .img_ a{
+	display: block;
+	width: 152.5px;
+	height: 230.5px;
+	position: absolute;
+	color: rgba(0,0,0,0);
+}
+.img_:hover .false{
+	background-color: rgba(0,0,0,.5);
+	bottom: 0px;
+	transition: .8s;
+}
+.img_:hover span{
+	color: white;
+}
+.left .img_:nth-child(1){
+	background-image: url(../img/恐龙时代.jpg);
+}
+.left .img_:nth-child(2){
+	background-image: url(../img/机器人.jpg);
+}
+.left .img_:nth-child(3){
+	background-image: url(../img/3D打印.jpg);
+}
+.left .img_:nth-child(4){
+	background-image: url(../img/科学思考.jpg);
+}
+.left .img_:nth-child(n+5){
+	background-image: url(../img/未完待续.png);
+}
+.explain{
+	width: 966px;
+	height: 100px;
+	margin-top: 20px;
+	border-top: 2px solid #959595;
+	border-bottom: 2px solid #959595;
+}
+.ex{
+	width: 966px;
+	height: 80px;
+	list-style-type: none;
+}
+.ex li{
+	list-style: none;
+	float: left;
+	display: block;
+	margin-right: 30px;
+	margin-bottom: 10px;
+	color: #FFFFFF;
+}

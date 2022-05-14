@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>产品网站</title>
+		
+		<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				$("#pull1").click(function() {
+					$("#side").animate({
+						width: '100px'
+					}, 300);
+				});
+				$("#pull2").click(function() {
+					$("#side").animate({
+						width: '0px'
+					}, 300);
+				});
+			})
+		</script>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				border: 0;
+			}
+			
+			
+			
+			.pull{
+				width: 8px; 
+				height: 50px;
+				position: relative;
+				background-color: #000000;
+			}
+			#side {
+				width: 0px;
+				height: 200px;
+				float: right;
+				background-color: gold;
+				overflow: hidden;
+			}
+			
+			#side a {
+				display: block;
+				text-decoration: none;
+				color: #262626;
+				margin: 16px 15px;
+			}
+			
+			#side a:hover {
+				background-color: #FFFFFF;
+			}
+			/* 侧边链接栏 */
+			
+			#home{
+				background: url(./img/bg.jpg) fixed;
+				background-size: cover;
+				min-height: 100vh;
+				color: #fff;
+			}
+			#home p {
+			    margin: 50px 0 50px 0;
+			}
+			#home a{
+				text-decoration: none;
+				color: #000000;
+			}
+			#c{
+				min-height: 1px;
+				padding-right: 15px;
+				padding-left: 15px;
+			}
+			#features{
+				background: url(./img/pattern_bg.png) fixed;
+				background-size: cover;
+			}
+			
+			#features .feature-box {
+			    transition: all .5s;
+			    padding: 40px 0 40px 0;
+				background: transparent;
+			}
+			#features .feature-box:hover {
+			    padding: 0;
+				color: #FFFFFF;
+			}
+			#features .feature-box .feature-box-inner {
+			    box-shadow: inset 0px 0px 0 10px #cecece;
+			    border-bottom: 10px solid #cecece;
+			    border-top: 10px solid #cecece;
+			    transition: all .5s;
+			    background: #fff;
+			    padding: 20px;
+			}
+			#features .feature-box:hover .feature-box-inner {
+				box-shadow: inset 0px 0px 0px 0px #cecece;
+				border-bottom: 10px solid #3d799f;
+				border-top: 10px solid #3d799f;
+			    padding: 60px 20px 60px 20px;
+			    background: #3399cc;
+			}
+			#features .feature-box p {
+				max-width: 250px;
+				min-height: 260px;
+				line-height: 32px;
+				padding-top: 30px;
+				font-size: 18px;
+				margin: auto;
+			}
+			@media screen and (min-width:1100px){
+			    #features .feature-box{
+				        width: 25%;
+			    }
+				#features{
+					height: 100vh;
+				}
+			}
+			@media screen and (max-width:1100px){
+			    #features .feature-box{
+				        width: 99%;
+			    }
+				#c{
+					flex-direction: column;
+				}
+			}
+			
+			
+			#download{
+				background-image: url(img/02.jpg);
+				background-size: cover;
+				min-height: 100vh;
+				color: #fff;
+			}
+			.container {
+				width: 100%;
+				min-height: 100vh;
+			}
+			
+		</style>
+	</head>
+	<body>
+		
+		<div style="position: fixed;top: 20%; width: 108px;height: 300px;">
+			<div class="pull" id="pull1" style="top: 80px;"></div>
+			<div id="side">
+				<!-- 侧边链接区 -->
+				<a href="index.html">首页</a>
+				<a href="recruit_page.html">招贤纳士</a>
+				<a href="product_page.html">产品网站</a>
+				<a href="login_page.html">登录页面</a>
+				<a href="feedback_page.html">反馈网站</a>
+			</div>
+			<div class="pull" id="pull2" style="top: 100px;"></div>
+		</div>
+		
+		
+		
+		<section id="home">
+			<div class="container">
+				<div style="margin: 0px auto;padding-top: 60px;">
+					<h1 style="text-align: center;font-size: 60px;">APP</h1>
+				</div>
+				<div style="margin: 0 auto;">
+					<h2 style="font-family:eras bold itc; text-align: center;padding-top: 10px;">Small Post Travel app</h2>
+					<p style="text-align: center;">
+						产品app较详细介绍
+						Detailed introduction of product app
+					</p>
+				</div>
+				<div >
+					<center>
+					    <div style="margin: 10px; width: 200px;height: 70px;line-height: 70px; text-align: center; background-color: #ffffff;display: inline-block;"><a href="#features">Features</a></div>
+					    <div style="margin: 10px; width: 200px;height: 70px;line-height: 70px; text-align: center; background-color: #ffffff;display: inline-block;"><a href="#download">Download</a></div>
+				    </center>
+				</div>
+			</div>
+		</section>
+		
+		
+		<section id="features">
+			<div class="container" style="">
+				<center>
+				<header style="display: inline-block;">
+				    <h1 style="font-size: 30px; text-align: center;font-family: castellar;color: #FFFFFF;"><span>...</span> Features <span>...</span></h1>
+				</header>
+				</center>
+				
+			<div id="c" style="display: flex;">	
+				<div class="feature-box">
+					<div class="feature-box-inner">
+						<p style="font-size: 25px;">
+						    常用功能：找车位、停
+							<br /><br />
+							车缴费、车位信息、车
+							<br /><br />
+							位地图。
+						</p>
+					</div>
+				</div>
+				
+				
+				<div class="feature-box">
+					<div class="feature-box-inner">
+						<p style="font-size: 25px;">
+						    核心亮点：无感支付，
+							<br /><br />
+							绑定车牌开通免密，车
+							<br /><br />
+							子可以直接“刷脸”进
+							<br /><br />
+							出。
+						</p>
+					</div>
+				</div>
+				
+				
+				<div class="feature-box">
+					<div class="feature-box-inner">
+						<p style="font-size: 25px;">
+						    实时反馈：用户可随时
+							<br /><br />
+							随地了解到汽车停车情
+							<br /><br />
+							况，甚至可以与邻进车
+							<br /><br />
+							主取得联系。
+						</p>
+					</div>
+				</div>
+				
+				<div class="feature-box">
+					<div class="feature-box-inner">
+						<p style="font-size: 25px;">
+						    特色功能：与其他汽车
+							<br /><br />
+							产业合作，以取得各种
+							<br /><br />
+							汽车服务，为客户提
+							<br /><br />
+							供'一站式'服务。
+						</p>
+					</div>
+				</div>
+			</div>	
+			
+			</div>
+		</section>
+		
+		
+		<section id="download">
+			<div class="container">
+				<center>
+				<header style="display: inline-block;">
+				    <h1 style="font-size: 30px; text-align: center;font-family: castellar; color: #3399CC;"><span>...</span> Download <span>...</span></h1>
+				</header>
+				</center>
+				<div style="margin: 0px auto;padding-top: 60px;">
+				    <p style="text-align: center; color: #3399CC;">
+				        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor <br /> incididunt ut 
+				        labore et dolore magna aliqua. Ut enim ad minim veniam, quis<br /> nostrud exercitation.
+				    </p>
+				</div>
+				<div class="c" style="margin-top: 50px;">
+				    <p style="text-align: center; font-size: 55px;color: #3399CC;">15,050,500</p>
+				</div>
+				<div class="c">
+				    <p style="text-align: center; margin-top: 40px;color: #3399CC;">Over 15 millions user on Google play store</p>
+				</div>
+				<div class="c">
+					<center>
+				    <a href="#" style="margin-top: 50px;"><img style="margin-top: 50px;border-radius: 20px;" src="./img/download_btn.png"/></a>
+					</center>
+				</div>
+			</div>
+		</section>
+	</body>
+</html>

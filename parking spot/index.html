@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>创业计划书</title>
+		<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				$("#pull1").click(function() {
+					$("#side").animate({
+						width: '100px'
+					}, 300);
+				});
+				$("#pull2").click(function() {
+					$("#side").animate({
+						width: '0px'
+					}, 300);
+				});
+				$("#pull3").click(function() {
+					$("#NAV").animate({
+						width: '112px'
+					}, 30);
+				});
+				$("#pull4").click(function() {
+					$("#NAV").animate({
+						width: '0px'
+					}, 30);
+				});
+				var isdream = false;
+				$("#flip").click(function(){
+				    $("#panel").slideToggle("slow");
+					$("#text1").slideToggle("slow");
+					isdream=!isdream;
+					if(isdream){
+						$("#ff").text("梦幻");
+					}
+					else{
+						$("#ff").text("真实");
+					}
+				});
+				$("#1").click(function(){
+					$("#11").animate({
+						width: '200px'
+					},3000);
+				});
+				$("#2").click(function(){
+					$("#22").animate({
+						width: '100px'
+					},3000);
+				});
+				$("#3").click(function(){
+					$("#33").animate({
+						width: '250px'
+					},3000);
+				});
+				$("#4").click(function(){
+					$("#44").animate({
+						width: '500px'
+					},3000);
+				});
+				$("#5").click(function(){
+					$("#55").animate({
+						width: '900px'
+					},3000);
+				});
+			})
+		</script>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				border: 0;
+			}
+
+			#nav {
+				width: 966px;
+				height: 81.5px;
+				padding: 0 100px;
+				margin: 0 auto;
+				background-color: #989898;
+				opacity: .8;
+			}
+
+			#nav ul {
+				position: fixed;
+				display: flex;
+				width: 966px;
+				height: 81.5px;
+				background-color: #C0C0C0;
+			}
+
+			#nav ul li {
+				list-style: none;
+				margin: 0 auto;
+			}
+
+			#nav ul li a {
+				display: block;
+				position: relative;
+				padding: 10px 20px;
+				margin: 20px 0;
+				text-decoration: none;
+				text-transform: uppercase;
+				color: #262626;
+				font-weight: bold;
+				transition: .5s;
+			}
+
+			#nav ul li a:hover {
+				color: #FFFFFF;
+			}
+
+			#nav ul li a::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				border-top: 1px solid #000000;
+				border-bottom: 1px solid #000000;
+				transform: scaleY(2);
+				/*缩放Y轴(上下) 里面的值缩放距离*/
+				opacity: 0;
+				/*不透明度*/
+				transition: .5s;
+			}
+
+			#nav ul li a:hover::before {
+				transform: scaleY(1.2);
+				opacity: 0.7;
+			}
+
+			#nav ul li a::after {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: #000000;
+				opacity: 0.7;
+				transform: scale(0);
+				z-index: -1;
+				/*堆叠*/
+				transition: .5s;
+			}
+
+			#nav ul li a:hover::after {
+				transform: scale(.7);
+			}
+
+			/* 导航栏 */
+			#_N{
+				display: none;
+			}
+			#NAV {
+				display: block;
+				float: left;
+				width: 0px;
+				margin-top: 50px;
+				background-color: #FFD700;
+				overflow: hidden;
+			}
+
+			#NAV a {
+				display: block;
+				text-decoration: none;
+				color: #262626;
+				margin: 16px 15px;
+			}
+
+			#NAV a:hover {
+				background-color: #FFFFFF;
+			}
+
+			
+
+
+			#footer {
+				width: 966px;
+				height: 170px;
+				padding: 0 100px;
+				margin: 0 auto;
+				background-color: #989898;
+				opacity: .8;
+			}
+			/* 底部说明栏*/
+			
+			.pull{
+				width: 8px; 
+				height: 50px;
+				position: relative;
+				background-color: #000000;
+			}
+
+
+			#side {
+				width: 0px;
+				height: 200px;
+				float: right;
+				background-color: gold;
+				overflow: hidden;
+			}
+
+			#side a {
+				display: block;
+				text-decoration: none;
+				color: #262626;
+				margin: 16px 15px;
+			}
+
+			#side a:hover {
+				background-color: #FFFFFF;
+			}
+
+			/* 侧边链接栏 */
+
+			.col {
+				margin: 0 auto 50px;
+				width: 966px;
+				height: 480px;
+				background-color: rgba(131, 181, 172, 0.5);
+			}
+
+			/* 分栏 */
+
+			@media screen and (max-width:1030px) {
+				#side,.pull,#NAV{
+					opacity: .5;
+				}
+
+				#nav,#footer{
+					display: none;
+				}
+
+				#_N{
+					display: block;
+				}
+			}
+
+			/*响应式*/
+			
+			.neirong{
+				border: solid 0px #55beff;
+				box-shadow: ;
+				margin-left: 46.6px;
+				width: 872.8px;
+				height: 394px;
+				background-color: rgba(136,136,136,.8);
+			}
+			.biaoti{
+				border: solid 0px #FFFFFF;
+				width: 240px;
+			}
+			.text{
+				width: 862.8px;
+				border: solid 0px #c3c3c3;
+			}
+			#flip:hover{
+				cursor: pointer;
+			}
+			.teamer{
+				background-color: rgba(151, 151, 146, 0.5);
+				margin-left: 8px;
+				width: 231px;
+				height: 341px;
+				float: left;
+			}
+			.teamercp p,.teamercp h2{
+				text-align: center;
+				color: #FFFFFF;
+			}
+			.teamerimg{
+				width: 231px;
+				height: 150px;
+				line-height: 215px;
+			}
+			.teamerimg img{
+				border: 4px solid #83b9c3;
+				border-radius: 50%; 
+				margin: 0px 0px 5px 70px;
+			}
+			.teamer:hover img{
+				transform:rotate3d(2,0,1,360deg);
+				transition: all 2s;
+			}
+			
+			.ftime-xian {
+			    list-style-type: none;
+			    width: 966px;
+			}
+			 
+			.ftime-xian li {
+			    float: left;
+			    position: relative;
+			    text-align: center;
+			    width: 25%;
+			    padding-top: 10px;
+			}
+			 
+			.ftime-xian li b:before{
+			    content: '';
+			    position: absolute;
+			    left: 47%;
+			    width: 12px;
+			    height: 12px;
+			    border: 2px solid #4c4c4c;
+			    border-radius: 8px;
+			    background: #4c4c4c;
+			}
+			#one b::before{
+				top: 35px;
+			}
+			#two b::before{
+				top: -10px;
+			}
+			#three b::before{
+				top: 35px;
+			}
+			#four b::before{
+				top: -10px;
+			}
+			.ka{
+				background-color: rgba(25, 135, 159, 0.4); 
+				width: 250px;
+				height: 218.5px;
+				float: left;
+			}
+			#com{
+				background-image: url(img/04.jpg);
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+			}
+			.bijiao{
+				position: absolute;
+				background-color: rgba(61, 124, 143, 0.5);
+				color: #f4f4f4;
+				width: 100px;
+				height: 100px;
+				text-align: center;
+				border-radius: 50%;
+				line-height: 32px;
+				transition: all 2s;
+			}
+			
+			
+		    #com:hover .bijiao2{
+				top: 100px;
+				transition: 2s;
+			}
+			#com:hover .bijiao3{
+				transform: rotateZ(-50deg) translateX(150px);
+				transition: 2s;
+			}
+			#com:hover .bijiao4{
+				transform: rotateZ(50deg) translateX(-150px);
+				transition: 2s;
+			}
+			.bijiao1{
+				top: 200px;
+				left: 435px;
+			}
+			.bijiao2{
+				top: 40px;
+				left: 435px;
+			}
+			.bijiao3{
+				top: 350px;
+				left: 245px;
+			}
+			.bijiao4{
+				top: 350px;
+				left: 625px;
+			}
+			.year{
+				background-color: #9c9c9c;
+				width: 50px;
+				height: 50px;
+				margin-top: 25px;
+				line-height: 50px;
+				float: left;
+			}
+			.year:hover{
+				cursor: pointer;
+			}
+			.yeji{
+				background-color: #2c8400;
+				height: 50px;
+				margin-top: 25px;
+				float: left;
+			}
+			
+			
+			
+			
+		</style>
+	</head>
+	<body>
+		<div style="position: fixed;top: 20%; width: 108px;height: 300px;">
+			<div class="pull" id="pull1" style="top: 80px;"></div>
+			<div id="side">
+				<!-- 侧边链接区 -->
+				<a href="index.html">首页</a>
+				<a href="recruit_page.html">招贤纳士</a>
+				<a href="product_page.html">产品网站</a>
+				<a href="login_page.html">登录页面</a>
+				<a href="feedback_page.html">反馈网站</a>
+			</div>
+			<div class="pull" id="pull2" style="top: 100px;"></div>
+		</div>
+		
+		<div id="_N" style="position: fixed;top: 20%;right: 0; width: 120px;height:300px;">
+			<div class="pull" id="pull3" style="top: 80px; float: right;"></div>
+			<div id="NAV">
+				<!-- 大分辨率导航栏 -->
+				<a href="#int">简介</a>
+				<a href="#team">团队介绍</a>
+				<a href="#bmod">商业模式</a>
+				<a href="#com">核心竞争力</a>
+				<a href="#pore">业绩预测</a>
+			</div>
+			<div class="pull" id="pull4" style="top: 150px;left: 112px; "></div>
+		</div>
+		
+		
+		<div id="nav">
+			<!-- 导航栏 -->
+			<ul>
+				<li><a href="#int">简介</a></li>
+				<li><a href="#team">团队介绍</a></li>
+				<li><a href="#bmod">商业模式</a></li>
+				<li><a href="#com">核心竞争力</a></li>
+				<li><a href="#fore">业绩预测</a></li>
+			</ul>
+		</div>
+
+		<div id="int" class="col" style=" background-image: url(img/bg.jpg);background-repeat: no-repeat;background-size: 100%;">
+			<!-- 简介 -->
+			<br />
+			<br />
+			<div class="neirong">
+				<div class="biaoti" style="height: 80px;">
+					<h1 style="display: inline-block; margin-top: 10px;border-right: #000000 solid 1px;padding-right: 10px;">01</h1>
+					<span style="font-size: 40px;">&nbsp &nbsp 简介</span>
+					<br />
+					<span>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp BRIEF INTRODUCTION </span>
+				</div>
+				<br />
+				<div class="text" id="text1">
+					<p style="font-size: 20px;color: #FFFFFF;">&nbsp &nbsp &nbsp 
+					周末，乔治正满心欢喜载着女朋友，
+					准备先来个浪漫晚餐，然后看场电影，
+					最后 …… 结果刚到餐厅，就堵在了<span style="color: #FFD700; display: inline-block;border-bottom: #000000 solid 1px;">停车场</span>门口，
+					并且被告知前面还有十几辆车等待中。
+					于是换个地方，所有停车场都显示已满，
+					这个时候等待他的将是什么，恐怕不言自明。</p>
+					<br />
+					<br />
+					<br />
+					<p style="font-size: 20px;color: #FFFFFF;">
+						&nbsp &nbsp &nbsp 乔治为解决这一烦恼，成立了一家<span style="color: #FFD700; display: inline-block;border-bottom: #000000 solid 1px;">"美停"公司</span>。
+						专门为用户提供停车位信息，以及停车服务，
+						立志要帮广大车主解决各种停车烦恼。
+					</p>
+					<br />
+					<br />
+				</div>
+				<div id="flip" style="color: #FFC0CB; text-align: center;border: solid #c3c3c3 5px;width: 862.8px;">点我看<span id="ff" style="color: #FFFFFF;">真实</span>背景</div>
+				<div id="panel" style="display: none; border: solid #c3c3c3 0px;width: 862.8px;position: relative;top: 0px;">
+					<p style="font-size: 20px;color: #FFFFFF;">
+						根据公安部统计的数据显示，
+						截至 2018 年底，全国汽车保有量达到了 <span style="color: #FFD700; display: inline-block;border-bottom: #000000 solid 1px;">2.4亿辆</span>。
+						然而汽车数量增长的同时，城市内各类停车场地并未进行有效整合，
+						难以实现资源的合理配置，这导致国内的停车位缺口达到了约 5000 万个。
+					</p>
+					<br />
+					<br />
+					<br />
+					<p style="font-size: 20px;color: #FFFFFF;">
+						显然，<span style="color: #FFD700; display: inline-block;border-bottom: #000000 solid 1px;">停车难</span>，已经成为一种城市现象，
+						也是城市发展和老司机出行急需解决的痛点。
+						于是，也就催生了智慧停车行业的火热。
+					</p>
+					<br />
+					<br />
+				</div>
+			</div>
+		</div>
+		
+		
+		
+		<div id="team" class="col">
+			<!-- 团队介绍 -->
+			<div class="biaoti" style="height: 70px;width: 150px; float: left;">
+				<h1 style="display: inline-block; margin-top: 5px;border-right: #000000 solid 1px;padding-right: 10px;">02</h1>
+				<span style="font-size: 30px;">&nbsp 团队</span>
+				<br />
+				<span>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp MY TEAM </span>
+			</div>
+			<div class="biaoti" style="width: 966px;border: none;">
+				<br />
+				<br />
+				<h2 style="text-align: center;">我们的<strong>团队</strong></h2>
+				<hr style="height: 1px;background-color: #000000;"/>
+				<p style="text-align: center;">企业应用技术解决方案专家，业务流程外包专家在内的专业人员。</p>
+				<br />
+				<br />
+			</div>
+			<div class="teamer">
+				<div class="teamerimg">
+					<img src="./img/bg.jpg" width="80px" height="80px" />
+				</div>
+				<div class="teamercp">
+					<h2>乔治</h2>
+					<br />
+					<p>创始人</p>
+					<p>企业创始人，湘大在读本科生，拥有一腔热血</p>
+				</div>
+			</div>
+			<div class="teamer">
+				<div class="teamerimg">
+					<img src="./img/bg.jpg" width="80px" height="80px" />
+				</div>
+				<div class="teamercp">
+					<h2>扎克</h2>
+					<br />
+					<p>技术总监</p>
+					<p>湘大优秀在读本科生，最专业的技术人才</p>
+				</div>
+			</div>
+			<div class="teamer">
+				<div class="teamerimg">
+					<img src="./img/bg.jpg" width="80px" height="80px" />
+				</div>
+				<div class="teamercp">
+					<h2>佩奇</h2>
+					<br />
+					<p>市场总监</p>
+					<p>湘大优秀在读本科生，拥有敏锐的商机意识</p>
+				</div>
+			</div>
+			<div class="teamer">
+				<div class="teamerimg">
+					<img src="./img/bg.jpg" width="80px" height="80px" />
+				</div>
+				<div class="teamercp">
+					<h2>亚历山大</h2>
+					<br />
+					<p>运营总监</p>
+					<p>湘大优秀在读本科生，拥有非常强大的商业头脑</p>
+				</div>
+			</div>
+		</div>
+		
+		
+		
+		<div id="bmod" class="col">
+			<!-- 商业模式 -->
+			<div class="biaoti" style="width: 200px;display: inline-block;float: left;">
+				<h1 style="display: inline-block; margin-top: 10px;border-right: #000000 solid 1px;padding-right: 10px;">03</h1>
+				<span style="font-size: 30px;">&nbsp 商业模式</span>
+				<br />
+				<span>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp BUSINESS MODEL</span>
+			</div>
+			<div class="ka" style="margin-left: 25px;border-radius: 10px 10px 50px 50px;">
+				&nbsp 目标客户：客户分为直接客户和<br /><br />
+				&nbsp 间接客户。直接客户为广大汽车<br /><br />
+				&nbsp 车主，汽车厂商和停车场可发展<br /><br />
+				&nbsp 成间接客户。
+				<!-- 要搞清楚你的产品或服务是谁在用，是谁掏钱买，
+				定位要准确，换句话说就是要清楚用户和客户的区别，
+				最好还能对用户进行细分。 -->
+			</div>
+			<div class="ka" style="margin-left: 225px;border-radius:10px 10px 50px 50px ;">
+				&nbsp 推广模式：借助合作伙伴(汽车厂<br /><br />
+				&nbsp 商 停车场)联动推广,争取获得政<br /><br />
+				&nbsp 府部门的大力支持,汽车用户内部<br /><br />
+				&nbsp 辐射以及主要靠线下和线上的相<br /><br />
+				&nbsp 关宣传。
+				<!-- 怎么让别人知道你的产品或服务，
+				别人可以通过什么样的渠道进行购买，
+				你有没有比较新颖的推广方式。 -->
+			</div>
+			<ul class="ftime-xian">
+		        <li id="one"><b></b>价值载体</li>
+		        <li id="two"><b></b>目标客户</li>
+                <li id="three"><b></b>盈利模式</li>
+	            <li id="four"><b></b>推广模式</li>
+	        </ul>
+			<div class="ka" style="margin-top: 12px;border-radius: 50px 50px 10px 10px;">
+				<br />
+				&nbsp &nbsp 价值载体：为用户提供精准的<br /><br />
+				&nbsp 找车位服务，解决停车难、停车<br /><br />
+				&nbsp 耗时长等难题。以贴心的服务为<br /><br />
+				&nbsp 价值载体，以专业的技术为服务<br /><br />
+				&nbsp 做支撑。
+			</div>
+			<div class="ka" style="margin-left: 220px;margin-top: 12px;border-radius: 50px 50px 10px 10px ;">
+				<br />
+				&nbsp &nbsp 盈利模式：获利渠道来自三方。<br /><br />
+				&nbsp  收取汽车用户极少服务费(0.1元<br /><br />
+				&nbsp 每次)，收取汽车厂商，停车场一<br /><br />
+				&nbsp 定的系统维修费(签订合同)。<br /><br />
+				&nbsp 起步之后利润可达百万/天。
+				<!-- 你是怎么赚钱的，比如都是卖手机，
+				手机卖场直接通过卖手机赚钱，
+				网络运营商卖手机往往是通过充话费送手机的方式赚钱。 -->
+			</div>
+		</div>
+		
+		
+		
+		<div id="com" class="col" style="position: relative;">
+			<!-- 核心竞争力 -->
+			<div class="biaoti" style="width: 260px;">
+				<h1 style="display: inline-block; margin-top: 10px;border-right: #000000 solid 1px;padding-right: 10px;">04</h1>
+				<span style="font-size: 30px;">&nbsp &nbsp 核心竞争力</span>
+				<br />
+				<span>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp CORE COMPETITIVENESS</span>
+			</div>
+			<div class="bijiao bijiao1" ><br /> "美停"公司</div>
+			<div class="bijiao bijiao2" ><br /> 汽车用户</div>
+			<div class="bijiao bijiao3" ><br /> 汽车厂商</div>
+			<div class="bijiao bijiao4" ><br /> 停车场所</div>
+		</div>
+		
+		
+		<div id="fore" class="col">
+			<!-- 业绩预测 -->
+			<div class="biaoti" style="width: 260px;">
+				<h1 style="display: inline-block; margin-top: 10px;border-right: #000000 solid 1px;padding-right: 10px;">05</h1>
+				<span style="font-size: 30px;">&nbsp &nbsp 业绩预测</span>
+				<br />
+				<span>&nbsp &nbsp &nbsp &nbsp &nbsp PERFORMANCE FORECAST</span>
+			</div>
+			<div style="clear: both;">
+				<div class="year" id="1">前三年</div><div class="yeji" id="11" style="background-color: #ff0000;"></div>
+			</div>
+			<div style="clear: both;">
+				<div class="year" id="2">第四年</div><div class="yeji" id="22"></div>
+			</div>
+			<div style="clear: both;">
+			     <div class="year" id="3">第五年</div><div class="yeji" id="33"></div>
+			</div>
+			<div style="clear: both;">
+				<div class="year" id="4">五年后</div><div class="yeji" id="44"></div>
+		    </div>
+			<div style="clear: both;">
+				<div class="year" id="5">十年后</div><div class="yeji" id="55"></div>
+			</div>
+		</div>
+		
+		
+		
+		<div id="footer">
+			<!-- 底部说明 -->
+			<p style="color: #000000; text-align: center;padding-top: 50px;">
+				意见反馈：2594787016@qq.com 电话：010-88888888 | 京ICP备00000000号-0<br /><br />
+				版权所有：banxian<br /><br />
+				关于我们 联系我们 招贤纳士 法律声明 网站地图
+			</p>
+		</div>
+	</body>
+</html>
+<!-- 1.名字
+    2.简介
+	3.团队介绍
+	4.商业模式
+
+	6.核心竞争力
+	7.业绩预测
+	
+	page1 产品网站
+	page2 公司网站
+	page3 运营网站
+	page4 反馈网站 -->

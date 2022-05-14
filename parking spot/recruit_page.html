@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>广招人才</title>
+		<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				$("#pull1").click(function() {
+					$("#side").animate({
+						width: '100px'
+					}, 300);
+				});
+				$("#pull2").click(function() {
+					$("#side").animate({
+						width: '0px'
+					}, 300);
+				});
+			})
+		</script>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				border: 0;
+			}
+
+			.pull {
+				width: 8px;
+				height: 50px;
+				position: relative;
+				background-color: #000000;
+			}
+
+			#side {
+				width: 0px;
+				height: 200px;
+				float: right;
+				background-color: gold;
+				overflow: hidden;
+			}
+
+			#side a {
+				display: block;
+				text-decoration: none;
+				color: #262626;
+				margin: 16px 15px;
+			}
+
+			#side a:hover {
+				background-color: #FFFFFF;
+			}
+
+			/* 侧边链接栏 */
+
+			.tabJob .content {
+				padding: 0 0 40px 20px;
+				border: 1px solid #e2e2e2;
+				border-top: 4px solid #65d0c5;
+				margin-top: 90px;
+			}
+
+			.tabJob .content:first-child {
+				margin-top: 10px;
+			}
+
+			.tabJob .content p {
+				font-size: 18px;
+				line-height: 40px;
+			}
+
+			.tabJob .content p.title {
+				font-size: 24px;
+				color: #545454;
+				line-height: 60px;
+			}
+
+			.tabJob .content ol {
+				padding-left: 20px;
+				list-style-type: none;
+				counter-reset: sectioncounter;
+			}
+
+			.tabJob .content ol li {
+				color: #8d8d8d;
+				font-size: 16px;
+				line-height: 30px;
+			}
+
+			.tabJob .content ol li:before {
+				content: counter(sectioncounter) "、";
+				counter-increment: sectioncounter;
+			}
+
+			
+			
+			
+			
+			a{
+				text-decoration: none;
+				color: white;
+			}
+			
+			#wrap p{
+				background: #404040;
+				position: relative;
+				top: 510px;
+				overflow: hidden;
+				height: 300px;
+				width: 400px;
+				margin: 0 auto;
+				transition: all 1s ease-in-out .3s;
+				text-align: center;
+				color: white;
+			}
+			#wrap{
+				height: auto;
+				padding: 0 10%;
+				background-color: #f6f6f6;
+				overflow: hidden;
+			}
+			#content-wrap{
+				overflow: hidden;
+				height: 900px;
+				width: 609px;
+				margin: 0 auto;
+			}
+			#content-wrap::before{
+				content: "";
+				position: absolute;
+				top: 100px;
+				background:url(./img/信封befor.png);
+				width: 609px;
+				height: 445px;
+			}
+			#content-wrap::after{
+				content: "";
+				position:absolute ;
+				top: 550px;
+				background: url(./img/信封after.png);
+				width:608px;
+				height: 157px;
+			}
+			#content-wrap.hide::after,
+			#content-wrap.hide::before{
+				display: none;
+			}
+			
+			#content-wrap:hover p{
+				top: 240px;
+			}
+		</style>
+	</head>
+	<body>
+
+		<div style="position: fixed;top: 20%; width: 108px;height: 300px;">
+			<div class="pull" id="pull1" style="top: 80px;"></div>
+			<div id="side">
+				<!-- 侧边链接区 -->
+				<a href="index.html">首页</a>
+				<a href="recruit_page.html">招贤纳士</a>
+				<a href="product_page.html">产品网站</a>
+				<a href="login_page.html">登录页面</a>
+				<a href="feedback_page.html">反馈网站</a>
+			</div>
+			<div class="pull" id="pull2" style="top: 100px;"></div>
+		</div>
+
+
+
+		<div class="tabJob">
+
+			<div id="wrap">
+				<div style="position: relative;height:707px;overflow: hidden;">
+					<div id="content-wrap">
+						<p>
+							您有一份信待查看
+							<br />
+							<br />
+							<span style="font-size: 20px; color: white;">
+								乔治诚挚邀请
+								<br />
+								<br />
+								有志青年加入
+								<br />
+								<br />
+								我们的团队
+								<br />
+								<br />
+								只有程序员才懂程序员
+								<br />
+								<br />
+								所以技术人员的薪资占公司利润的60%
+							</span>
+						</p>
+					</div>
+				</div>
+			</div>
+
+
+
+
+
+			<div class="content">
+				<p class="title">前端开发工程师</p>
+				<p>> 职位描述</p>
+				<ol>
+					<li>前端开发及维护工作；</li>
+					<li>有良好的技术基础，熟悉 Web 标准，熟练掌握多种 Web 前端技术；</li>
+					<li>掌握行业内流行的类库，Vue.js， React 等主流框架；</li>
+					<li>参与公司前端工程的设计、研发；</li>
+					<li>了解不同浏览器之间的差异，移动设备之间的差异。</li>
+				</ol>
+			</div>
+			<div class="content">
+				<p class="title">JAVA 工程师</p>
+				<p>> 职位描述</p>
+				<ol>
+					<li>软件开发及维护工作；</li>
+					<li>根据要求进行软件概要设计、详细设计、编码、单元测试工作及说明文档的编写</li>
+					<li>熟悉Windows平台下GUI开发；</li>
+					<li>数据库管理及应用开发；</li>
+					<li>了解不同移动设备之间的差异。</li>
+				</ol>
+			</div>
+			<div class="content">
+				<p class="title">人工智能工程师</p>
+				<p>> 职位描述</p>
+				<ol>
+					<li>负责识别算法的训练、优化；</li>
+					<li>数字图像及视频处理算法开发，应用模块实现；</li>
+					<li>从事图像处理及模式识别项目的开发；</li>
+					<li>从事人工智能深度学习项目的开发；</li>
+					<li>协助完成项目开发和相应的文档管理；</li>
+				</ol>
+			</div>
+		</div>
+
+
+	</body>
+</html>

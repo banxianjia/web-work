@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="author" content="wcg" />
+		<meta name="description" content="表格" />
+		<meta name="keywords" content="高考，志愿，填报 " />
+		<title>高考志愿填报表</title>
+		<style>
+		ul
+		{
+			list-style-type:none;
+			padding: 6px;
+			background-color: #303030 ;
+		}
+        li
+		{
+			display: inline;
+			align:center;
+		}
+		a.one:link,a.one:visited
+		{
+			font-weight:bold;
+			color:#FFFFFF;
+			background-color:#303030 ;
+			text-align:center;
+			padding:6px;
+			text-decoration:;
+			text-transform:uppercase;
+		}
+		a.one:hover
+		{
+			font-size: 150%;
+		}
+		a.two:hover img
+		{
+			transform: scale(1.5);
+		}
+		#one{
+		    background-color: #708090;
+		    width: px;
+		    border: px ;
+		    padding: px;
+            margin:10px;
+			position: relative;top:10px ;bottom: px;right: px;left:px ;
+		}
+		#two{
+			background-color:;
+			width: px;
+			border: px ;
+			padding: px;
+			margin:10px;
+			position: relative;top:px ;bottom: px;right: px;left:px ;
+		}
+		#three
+		{
+			width:100px;
+			height:100px;
+			background:;
+			animation:myfirst 10s;
+			position: relative;top:px ;bottom: px;right: px;left:px ;
+			
+		}
+		
+		@keyframes myfirst
+		{
+	     0%   {background: ; left:0px; right:0px;top: 0px;bottom: 0px;transform : rotate(0deg);}
+		 25%  {background: ; left:0px; right:750px;top: 0px;bottom: 0px;transform : rotate(90deg);}
+	     50%  {background: ; left:750px; right:750px;top: 0px;bottom: 0px;transform : rotate(180deg);}
+	     75%  {background: ; left:750px; right:0px;top: 0px;bottom: 0px;transform : rotate(270deg);}
+		 100% {background: ; left:0px; right:0px;top: 0px;bottom: 0px;transform : rotate(360deg);}
+		 animation-direction:alternate;
+		}
+		#anniuone
+		{
+			background-color: #5F9EA0;
+		}
+		#anniutwo
+		{
+			background-color: #008000;
+			position: relative;top:px ;bottom: px;right:px;left:400px ;
+		}
+		</style>
+	</head>
+	<body bgcolor="darkgrey">
+		<div id="one">
+			<form>
+				<fieldset>
+					<label>考生邮箱：</label><input type="email"/>
+					<label>密码：</lable><input type="password"/>
+					 <input id="anniuone" type="button" value ="登录" onclick="alert('登录失败,请先注册')"/><input id="anniuone" type="button" value ="注册"onclick="alert('拒绝您注册!')" />
+				</fieldset>
+			</form>
+		</div>
+		<div id="three"><a class="two" href=""><img src="img/mmexport1600663998585.jpg" width="100px" height="100px"/></a></div>
+		<h1 align="middle">高考志愿填报表</h1>
+		<form action="">
+		<table frame="box">
+			<tr><td>
+			<table frame="box" align="left" height="253" bgcolor="">
+				<tr><td>基本信息</td></tr></table>
+			<table frame="box" align="right" height="253" width="150" bgcolor="">
+				<tr><td align=""><video width="150" height="253" controls loop="loop" autoplay="autoplay"><source src="./img/video_20201028_104303.mp4" type="video/mp4"></video></td></tr></table>
+					<table border="1">
+						<tr><td width="">真实姓名：<input type="text" name="" id="" value="" /></td>
+						<td>身份证号：<input type="number" name="" id="" value="" /></td>						
+						<td >性别：<input type="radio" name="sex">男<input type="radio" name="sex" value="女">女</td></tr>
+		                <tr><td width="">报名学校：<input type="text" name="" id="" value="" /></td> 		
+						<td>报名号：<input type="number" name="" id="" value="" /></td>
+						<td>届别：<select><option value="农村应届">农村应届</option><option value="农村往届">农村往届</option><option value="城市应届">城市应届</option><option value="城市往届">城市往届</option></select></td></tr>
+						<tr><td>学籍所在学校：<input type="text" name="" id="" value="" /></td>
+						<td>户籍地：<input type="text" name="" id="" value="" /></td>
+						<td >民族：<input list="m"><datalist id="m"><option value="汉族"></option><option value="少数民族"></option></datalist></input></td></tr>
+						<tr><td width="">总成绩：<input type="number" name="" id="" value="" /></td>
+						<td>加分照顾类型：<input list="type"><datalist id="type"><option value="烈士子女"></option><option value="医生护士子女"></option><option value="国家级获奖"></option><option value="无"></option></datalist></input></td>
+						<td>应试语种：<input list="language"><datalist id="language"><option value="英语"></option><option value="德语"></option><option value="法语"></option><option value="日语"></option></datalist></td></tr>
+						<tr><td>招生考试总分：<input type="number" name="" id="" value="" /></td>
+						<td>综评成绩：<input type="number" name="" id="" value="" /></td></tr>
+					</table>
+					<table align="center" bgcolor="" >
+						<tr><td><b><h1>统一招生志愿</h1></b></td></tr>
+					</table>
+			            <table border="1" rules="all">
+						<ul>
+						  <li><a class="one" href="https://www.xtu.edu.cn/" target="_blank">本科一批</a></li>
+						  <li><a class="one" href="">本科二批</a></li>
+						  <li><a class="one" href="">本科三批</a></li>
+						</ul>
+						<tr><td >第一志愿：<input type="text" name="" id="" value="" /></td>
+						<td >学院：<input type="text" name="" id="" value="" /></td>
+						<td >专业：<input type="text" name="" id="" value="" /></td>
+						<td>服从调剂：<input type="radio" name="YN" id="" value="是">是<input type="radio" name="YN"  value="否">否</td></tr>
+						<tr><td >第二志愿：<input type="text" name="" id="" value="" /></td>
+						<td >学院：<input type="text" name="" id="" value="" /></td>
+						<td >专业：<input type="text" name="" id="" value="" /></td>
+						<td>服从调剂：<input type="radio" name="YN" id="" value="是">是<input type="radio" name="YN"  value="否">否</td></tr>
+						<tr><td>第三志愿：<input type="text" name="" id="" value="" /></td>
+						<td>学院：<input type="text" name="" id="" value="" /></td>
+						<td >专业：<input type="text" name="" id="" value="" /></td>
+						<td>服从调剂：<input type="radio" name="YN" id="" value="是">是<input type="radio" name="YN"  value="否">否</td></tr>
+						<tr><td width="">第四志愿：<input type="text" name="" id="" value="" /></td>
+						<td width="">学院：<input type="text" name="" id="" value="" /></td>
+						<td width="100">专业：<input type="text" name="" id="" value="" /></td>
+						<td>服从调剂：<input type="radio" name="YN" id="" value="是">是<input type="radio" name="YN"  value="否">否</td></tr>
+						<tr><td width="100">第五志愿：<input type="text" name="" id="" value="" /></td>
+						<td width="100">学院：<input type="text" name="" id="" value="" /></td>
+						<td width="100">专业：<input type="text" name="" id="" value="" /></td>
+						<td>服从调剂：<input type="radio" name="YN" id="" value="是">是<input type="radio" name="YN"  value="否">否</td></tr>
+						<tr><td width="100">第六志愿：<input type="text" name="" id="" value="" /></td>
+						<td width="100">学院：<input type="text" name="" id="" value="" /></td>
+						<td width="100">专业：<input type="text" name="" id="" value="" /></td>
+						<td>服从调剂：<input type="radio" name="YN" id="" value="是">是<input type="radio" name="YN"  value="否">否</td></tr>
+	                    <tr><td width="100">第七志愿：<input type="text" name="" id="" value="" /></td>
+	                    <td width="100">学院：<input type="text" name="" id="" value="" /></td>
+	                    <td width="100">专业：<input type="text" name="" id="" value="" /></td>
+	                    <td>服从调剂：<input type="radio" name="YN" id="" value="是">是<input type="radio" name="YN"  value="否">否</td></tr>
+                     	<tr><td width="100">第八志愿：<input type="text" name="" id="" value="" /></td>
+	                    <td width="100">学院：<input type="text" name="" id="" value="" /></td > 
+	                    <td width="100">专业：<input type="text" name="" id="" value="" /></td>
+	                    <td>服从调剂：<input type="radio" name="YN" id="" value="是">是<input type="radio" name="YN"  value="否">否</td></tr>
+						<tr><td width="100">第九志愿：<input type="text" name="" id="" value="" /></td>
+						<td width="100">学院：<input type="text" name="" id="" value="" /></td>
+						<td width="100">专业：<input type="text" name="" id="" value="" /></td>
+						<td>服从调剂：<input type="radio" name="YN" id="" value="是">是<input type="radio" name="YN"  value="否">否</td></tr>
+						<tr><td width="100">第十志愿：<input type="text" name="" id="" value="" /></td>
+						<td width="100">学院：<input type="text" name="" id="" value="" /></td>
+						<td width="100">专业：<input type="text" name="" id="" value="" /></td>
+						<td>服从调剂：<input type="radio" name="YN" id="" value="是">是<input type="radio" name="YN"  value="否">否</td></tr>
+						</table>
+					<button type="submit" onclick="alert('提交成功')" id="anniutwo">提交</button>
+					</table>
+			</td></tr>
+		</table>
+		</form>
+	</body>
+</html>

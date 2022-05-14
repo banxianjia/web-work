@@ -1,0 +1,176 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+#menu {
+	list-style-type: none;
+	top: 0;
+	width: 80%;
+	height: 100px;
+	margin-left: 10%;
+	background-color: #32CD32;
+}
+
+#menu li {
+	list-style: none;
+	float: left;
+	width: 19%;
+	text-align: center;
+	font-size: 30px;
+	border-right: #00FFFF 1px solid;
+	margin-top: 22px;
+}
+
+#menu li a {
+	text-decoration: none;
+	color: #000000;
+	position: relative;
+	display: block;
+	overflow: hidden;
+	transition: 0.3s all;
+}
+
+#menu li a::before {
+	content: '';
+	width: 100%;
+	position: absolute;
+	border-bottom: gold 5px solid;
+	bottom: 0;
+	right: 100%;
+	transition: 0.3s all;
+}
+
+#menu li a:hover::before {
+	right: 0;
+}
+
+#nav {
+	width: 100%;
+	height: 100px;
+	border: 0px;
+	background-color: aqua;
+	margin-bottom: 10px;
+	position: relative;
+}
+.plate{
+	background-color: #1E90FF;
+	width: 100%;
+	height: 2525px;
+	margin-bottom: 10px;
+	margin: 0 auto;
+}
+
+.column{
+	width: 100%;
+	height: 500px;
+	background-color: #1E90FF;
+	float: none;
+	margin-top:5px;
+	overflow: hidden;
+	position: relative;
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+.false{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.5);
+	position: absolute;
+	left: 100%;
+	transition: .7s;
+}
+.hero,.arms,.education,.history,.mobilization{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	width: 49.7%;
+	height: 49.9%;
+	border: 1px black solid;
+	float: left;
+	background-repeat: no-repeat;
+	background-size: 40%;
+	position: relative;
+}
+span{
+	float: right;
+	color: #1E90FF;
+}
+span a{
+	text-decoration: none;
+	color: #1E90FF;
+}
+#hero1{
+	background-image: url(../img/hero1邱少云.png);
+}
+#hero2{
+	background-image: url(../img/hero2钱学森.png);
+}
+#hero3{
+	background-image: url(../img/hero3王伟.png);
+}
+#hero4{
+	background-image: url(../img/hero4吴谦.png);
+}
+#arms1{
+	background-image: url(../img/arms1山东舰.png);
+}
+#arms2{
+	background-image: url(../img/arms2歼-10B.png);
+}
+#arms3{
+	background-image: url(../img/arms3运-20.png);
+}
+#arms4{
+	background-image:url(../img/arms4光学量子计算机.png) ;
+}
+#mobilization1{
+	background-image:url(../img/动员1红海行动.png) ;
+	background-size: 100%;
+}
+#mobilization2{
+	background-image: url(../img/动员2战狼2.png);
+	background-size: 100%;
+}
+#mobilization3{
+	background-image: url(../img/动员3空天猎.png);
+	background-size: 100%;
+}
+#mobilization4{
+	background-image: url(../img/动员4战狼1.png);
+	background-size: 100%;
+}
+#education3{
+	background-image:url(../img/人民英雄纪念碑左.png) ;
+	background-size: 100%;
+}
+#education4{
+	background-image: url(../img/人民英雄纪念碑右.png);
+	background-size: 100%;
+}
+#history1{
+	background-image: url(../img/历史1南京大屠杀.png);
+	background-size: 100%;
+}
+#history4{
+	background-image: url(../img/历史2抗美援朝.png);
+	background-size: 100%;
+}
+.column:hover .false{
+	left: 0;
+}
+#column1{
+	background-image: url(../img/国防英雄.png);
+}
+#column2{
+	background-image: url(../img/国防重器.png);
+}
+#column3{
+	background-image: url(../img/国防教育.png);
+}
+#column4{
+	background-image: url(../img/国防历史.png);
+}
+#column5{
+	background-image: url(../img/国防动员.png);
+}
